@@ -101,7 +101,7 @@
 
         /* Hero Section - CORRECTED PATH IN CSS */
         #hero {
-            /* This line now correctly points to your uploaded image */
+            /* Now correctly points to the uploaded image */
             background: url('hero_industrial_power.jpg') no-repeat center center/cover; 
             color: var(--text-light);
             text-align: center;
@@ -113,7 +113,7 @@
             position: relative; 
         }
 
-        /* Dark overlay for better text contrast (ADDED) */
+        /* Dark overlay for better text contrast */
         #hero::before {
             content: '';
             position: absolute;
@@ -214,7 +214,7 @@
             margin-bottom: 8px;
         }
         
-        /* Contact Section */
+        /* Contact Section Styles for Form */
         #contact {
             background: var(--background-dark);
             color: var(--text-light);
@@ -225,15 +225,18 @@
             color: var(--secondary-color);
         }
         
+        /* Contact Info/Details Grid */
         .contact-info {
             display: flex;
             justify-content: space-around;
             flex-wrap: wrap;
             margin-top: 30px;
+            text-align: center;
         }
         
         .contact-item {
             margin: 20px;
+            width: 300px; /* Gives space for contact details below the form */
         }
         
         .contact-item h3 {
@@ -404,7 +407,8 @@
             </div>
         </div>
     </section>
-  <section id="contact">
+    
+    <section id="contact">
         <div class="container">
             <h2>Contact M. Advanced Energy Systems</h2>
             <p>Ready to enhance your power, automation, or security systems? Send us a message, and we'll get back to you promptly.</p>
@@ -447,9 +451,9 @@
                         <p><strong>Fax:</strong> +966 13 817 5761</p>
                     </div>
                     <div class="contact-item">
-                        <h3 style="color: var(--secondary-color); font-size: 1.2em;">Email</h3>
+                        <h3 style="color: var(--secondary-color); font-size: 1.2em;">Email & Web</h3>
                         <p><strong>Inquiries:</strong> <a href="mailto:mail@maes-wll.com" style="color: white;">mail@maes-wll.com</a></p>
-                
+                        <p><strong>Website:</strong> <a href="http://www.maes-wll.com" style="color: white;">www.maes-wll.com</a></p>
                     </div>
                 </div>
             </div>
