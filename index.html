@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>YourCompany - Automation & Electrical Contracting</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.3.3/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+  <style>
+    /* Smooth scrolling for anchor links */
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-gray-900 text-white fixed w-full z-50 shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <a href="#hero" class="text-2xl font-bold">YourCompany</a>
+      <nav class="space-x-4">
+        <a href="#hero" class="hover:text-yellow-500">Home</a>
+        <a href="#about" class="hover:text-yellow-500">About</a>
+        <a href="#services" class="hover:text-yellow-500">Services</a>
+        <a href="#portfolio" class="hover:text-yellow-500">Projects</a>
+        <a href="#contact" class="hover:text-yellow-500">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero" class="h-screen bg-cover bg-center relative" style="background-image: url('images/hero-bg.jpg');">
+    <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+      <div class="text-center text-white px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Automation & Electrical Contracting in Khobar</h1>
+        <p class="text-lg md:text-xl mb-6">Providing reliable BMS, Automation, and Electrical solutions for commercial & industrial projects.</p>
+        <a href="#contact" class="bg-yellow-500 px-6 py-3 rounded-lg hover:bg-yellow-600 transition">Get a Quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-100">
+    <div class="container mx-auto md:flex md:items-center md:gap-12">
+      <div class="md:w-1/2 mb-8 md:mb-0">
+        <img src="images/logo.png" alt="Company Logo" class="rounded-lg shadow-lg">
+      </div>
+      <div class="md:w-1/2">
+        <h2 class="text-3xl font-bold mb-4">About Us</h2>
+        <p class="mb-4">We are a leading Automation & Electrical Contracting company based in Khobar, Saudi Arabia. Our team specializes in BMS solutions, automation systems, and electrical contracting for commercial and industrial projects.</p>
+        <p>With years of experience and a focus on quality and innovation, we deliver reliable solutions that enhance efficiency, safety, and sustainability in your facilities.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="text-xl font-semibold mb-2">BMS Solutions</h3>
+        <p>Design and installation of intelligent Building Management Systems for commercial and industrial facilities.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="text-xl font-semibold mb-2">Automation Systems</h3>
+        <p>Reliable automation solutions for factories, data centers, and industrial processes to optimize performance.</p>
+      </div>
+      <div class="p-6 bg-white shadow-lg rounded-lg text-center">
+        <h3 class="text-xl font-semibold mb-2">Electrical Contracting</h3>
+        <p>Expert electrical system design, installation, and maintenance services for large-scale projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio / Projects Section -->
+  <section id="portfolio" class="py-20 bg-gray-100">
+    <h2 class="text-3xl font-bold text-center mb-12">Our Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="images/project1.jpg" alt="Project 1" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <p class="text-white text-center px-4">Data Center Automation</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="images/project2.jpg" alt="Project 2" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <p class="text-white text-center px-4">BMS Installation</p>
+        </div>
+      </div>
+      <div class="relative group overflow-hidden rounded-lg shadow-lg">
+        <img src="images/project3.jpg" alt="Project 3" class="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110">
+        <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+          <p class="text-white text-center px-4">Electrical Contracting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 container mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-8">Get in Touch</h2>
+    <form id="contactForm" class="max-w-lg mx-auto bg-white p-8 rounded-lg shadow-lg">
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold">Name</label>
+        <input type="text" name="name" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold">Email</label>
+        <input type="email" name="email" class="w-full border border-gray-300 rounded px-3 py-2" required>
+      </div>
+      <div class="mb-4">
+        <label class="block mb-2 font-semibold">Message</label>
+        <textarea name="message" class="w-full border border-gray-300 rounded px-3 py-2" rows="5" required></textarea>
+      </div>
+      <button type="submit" class="bg-yellow-500 text-white px-6 py-2 rounded hover:bg-yellow-600 transition w-full">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    &copy; 2025 YourCompany. All rights reserved.
+  </footer>
+
+</body>
+</html>
