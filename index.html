@@ -126,22 +126,31 @@
             padding: 60px 0;
         }
 
-        #about, #services {
-            background: #f9f9f9;
-        }
-        
         #about {
             background: var(--background-light);
         }
 
-        /* Services Grid */
+        /* Services Section Specific Styles */
         #services {
             background: #f0f5ee; /* Light green tone */
         }
+
+        /* Image for Services */
+        .service-image {
+            width: 100%;
+            max-width: 800px; /* Increased max width for better visibility */
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            margin: 20px auto 40px auto;
+            display: block;
+            object-fit: cover;
+        }
         
+        /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width for more cards */
             gap: 30px;
             text-align: center;
         }
@@ -152,6 +161,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
+            text-align: left; /* Align text left in the card for better list reading */
         }
         
         .service-card:hover {
@@ -163,17 +173,24 @@
             color: var(--primary-color);
             font-size: 1.4em;
             margin-bottom: 15px;
+            text-align: center; /* Center title */
+        }
+        
+        .service-card > p {
+            text-align: center; /* Center paragraph */
+            font-style: italic;
+            font-size: 0.9em;
+            margin-bottom: 20px;
         }
         
         .service-card ul {
             list-style-type: disc;
-            text-align: left;
-            padding-left: 20px;
+            padding-left: 25px;
             font-size: 0.95em;
         }
         
         .service-card li {
-            margin-bottom: 5px;
+            margin-bottom: 8px;
         }
         
         /* Contact Section */
@@ -233,12 +250,21 @@
             #hero p {
                 font-size: 1.2em;
             }
+            
+            .services-grid {
+                grid-template-columns: 1fr; /* Single column on mobile */
+            }
+            
+            .service-image {
+                max-width: 95%;
+            }
         }
 
     </style>
 </head>
 <body>
 
+    <!-- Header & Navigation -->
     <header id="header">
         <div class="container">
             <div class="logo">MAES <span>Power & Energy</span></div>
@@ -253,6 +279,7 @@
         </div>
     </header>
 
+    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <div>
@@ -262,6 +289,7 @@
         </div>
     </section>
 
+    <!-- About Us Section -->
     <section id="about" class="container">
         <h2>About MAES</h2>
         <div style="max-width: 800px; margin: auto;">
@@ -282,9 +310,20 @@
         </div>
     </section>
 
+    <!-- Services Section -->
     <section id="services">
         <div class="container">
             <h2>Our Core Services & Solutions</h2>
+            
+            <!-- Image Banner for Services -->
+            <!-- IMPORTANT: Replace the placeholder source below with the actual URL of your 'complete-automation-solution-service.jpg' image for a professional look. -->
+            <img 
+                src="https://placehold.co/800x250/38761d/ffffff?text=MAES+Complete+Automation+Solution+Service" 
+                alt="Complete Automation Solution and Service" 
+                class="service-image" 
+                onerror="this.onerror=null;this.src='https://placehold.co/800x250/38761d/ffffff?text=MAES+Automation+Solutions';"
+            >
+            
             <div class="services-grid">
                 
                 <div class="service-card">
@@ -299,15 +338,21 @@
                     </ul>
                 </div>
                 
+                <!-- UPDATED SERVICE CARD -->
                 <div class="service-card">
-                    <h3>Energy Management & Automation (SCADA)</h3>
-                    <p>Expertise in Power Monitoring and Automation, with alliances with industry leaders like Schneider Electric and COPA-DATA.</p>
+                    <h3>Automation Solution, Metering & Services</h3>
+                    <p>Advanced power monitoring, control systems, and specialized solutions for Aramco and industrial sectors.</p>
                     <ul>
-                        <li>Power Monitoring Systems (PMS) & Electrical Power Monitoring Systems (EPMS).</li>
-                        <li>Substation Automation Systems & SCADA (IEC 61850).</li>
-                        <li>Power Systems Automation (PSA) & Remote Switching (RSMS) for Aramco projects.</li>
-                        <li>GPRS & Wireless Automation Network & Cloud Computing Technology.</li>
-                        <li>Supply of Power Meters (e.g., ION/PM series).</li>
+                        <li>Power Monitoring Systems (PMS)</li>
+                        <li>Electrical Power Monitoring Systems (EPMS)</li>
+                        <li>Power Systems Automation (PSA) – for Aramco projects</li>
+                        <li>Reduced Power Systems Automation (PSA) - for Aramco projects</li>
+                        <li>Remote Switching & Monitoring Systems (RSMS) – for Aramco projects</li>
+                        <li>SCADA (Supervisory Control and Data Acquisition)</li>
+                        <li>Billing System</li>
+                        <li>Tariff/Power Metering, PQ & Smart Metering, Power Totalizer</li>
+                        <li>GPRS & Wireless Automation Network</li>
+                        <li>Cloud Computing Communication Technology</li>
                     </ul>
                 </div>
                 
@@ -339,6 +384,7 @@
         </div>
     </section>
     
+    <!-- Contact Section -->
     <section id="contact">
         <div class="container">
             <h2>Contact M. Advanced Energy Systems</h2>
@@ -365,6 +411,7 @@
         </div>
     </section>
 
+    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <p>&copy; 2025 M. Advanced Energy Systems (MAES). All Rights Reserved. | <a href="#" style="color: var(--secondary-color);">Privacy Policy</a></p>
