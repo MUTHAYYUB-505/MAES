@@ -99,9 +99,10 @@
             border-bottom: 2px solid var(--primary-color);
         }
 
-        /* Hero Section */
+        /* Hero Section - CORRECTED PATH IN CSS */
         #hero {
-            background: var(--primary-color);
+            /* This line now correctly points to your uploaded image */
+            background: url('hero_industrial_power.jpg') no-repeat center center/cover; 
             color: var(--text-light);
             text-align: center;
             padding: 80px 20px;
@@ -109,16 +110,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative; 
+        }
+
+        /* Dark overlay for better text contrast (ADDED) */
+        #hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); 
+            z-index: 1;
+        }
+        
+        #hero .container {
+            position: relative;
+            z-index: 2;
         }
 
         #hero h1 {
             font-size: 3.5em;
             margin-bottom: 0.2em;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         #hero p {
             font-size: 1.5em;
             font-style: italic;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
         /* General Section Styling */
@@ -138,7 +159,7 @@
         /* Image for Services */
         .service-image {
             width: 100%;
-            max-width: 800px; /* Increased max width for better visibility */
+            max-width: 800px; 
             height: auto;
             border-radius: 12px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -150,7 +171,7 @@
         /* Services Grid */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjusted min-width for more cards */
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
             gap: 30px;
             text-align: center;
         }
@@ -161,7 +182,7 @@
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
-            text-align: left; /* Align text left in the card for better list reading */
+            text-align: left; 
         }
         
         .service-card:hover {
@@ -173,11 +194,11 @@
             color: var(--primary-color);
             font-size: 1.4em;
             margin-bottom: 15px;
-            text-align: center; /* Center title */
+            text-align: center; 
         }
         
         .service-card > p {
-            text-align: center; /* Center paragraph */
+            text-align: center; 
             font-style: italic;
             font-size: 0.9em;
             margin-bottom: 20px;
@@ -260,7 +281,7 @@
             }
             
             .services-grid {
-                grid-template-columns: 1fr; /* Single column on mobile */
+                grid-template-columns: 1fr; 
             }
             
             .service-image {
@@ -272,7 +293,6 @@
 </head>
 <body>
 
-    <!-- Header & Navigation -->
     <header id="header">
         <div class="container">
             <div class="logo">MAES <span>Power & Energy</span></div>
@@ -287,7 +307,6 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section id="hero">
         <div class="container">
             <div>
@@ -297,7 +316,6 @@
         </div>
     </section>
 
-    <!-- About Us Section -->
     <section id="about" class="container">
         <h2>About MAES</h2>
         <div style="max-width: 800px; margin: auto;">
@@ -318,18 +336,14 @@
         </div>
     </section>
 
-    <!-- Services Section -->
     <section id="services">
         <div class="container">
             <h2>Our Core Services & Solutions</h2>
             
-            <!-- Image Banner for Services -->
-            <!-- IMPORTANT: Replace the placeholder source below with the actual URL of your 'complete-automation-solution-service.jpg' image for a professional look. -->
             <img 
-                src="https://placehold.co/800x250/38761d/ffffff?text=MAES+Complete+Automation+Solution+Service" 
+                src="2.jpg" 
                 alt="Complete Automation Solution and Service" 
                 class="service-image" 
-                onerror="this.onerror=null;this.src='https://placehold.co/800x250/38761d/ffffff?text=MAES+Automation+Solutions';"
             >
             
             <div class="services-grid">
@@ -346,7 +360,6 @@
                     </ul>
                 </div>
                 
-                <!-- UPDATED SERVICE CARD -->
                 <div class="service-card">
                     <h3>Automation Solution, Metering & Services</h3>
                     <p>Advanced power monitoring, control systems, and specialized solutions for Aramco and industrial sectors.</p>
@@ -391,39 +404,62 @@
             </div>
         </div>
     </section>
-    
-    <!-- Contact Section -->
-    <section id="contact">
+  <section id="contact">
         <div class="container">
             <h2>Contact M. Advanced Energy Systems</h2>
-            <p>Let's discuss how we can bring secured facility, reliable power and energy conservation to your operations.</p>
+            <p>Ready to enhance your power, automation, or security systems? Send us a message, and we'll get back to you promptly.</p>
             
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Head Office</h3>
-                    <p>3rd Floor Al-Mutlaq Complex Bldg.3, Bandariyah, PO Box 2134, Al Khobar 31952, KSA</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Contact Details</h3>
-                    <p><strong>Phone:</strong> +966 13 817 5786 / 802 2922</p>
-                    <p><strong>Fax:</strong> +966 13 817 5761</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Email & Web</h3>
-                    <p><strong>General Inquiries:</strong> <a href="mailto:mail@maes-wll.com" style="color: white;">mail@maes-wll.com</a></p>
-                    <p><strong>Website:</strong> <a href="http://www.maes-wll.com" style="color: white;">www.maes-wll.com</a></p>
+            <div class="contact-form-container" style="max-width: 600px; margin: 30px auto 0 auto;">
+                
+                <form action="YOUR_FORMSPREE_ENDPOINT" method="POST" style="display: grid; gap: 20px; text-align: left;">
+                    
+                    <label for="name" style="font-weight: bold;">Your Name:</label>
+                    <input type="text" id="name" name="name" required 
+                           style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; width: 100%; color: var(--text-dark);">
+                    
+                    <label for="email" style="font-weight: bold;">Your Email:</label>
+                    <input type="email" id="email" name="_replyto" required 
+                           style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; width: 100%; color: var(--text-dark);">
+                    
+                    <label for="subject" style="font-weight: bold;">Subject:</label>
+                    <input type="text" id="subject" name="subject" 
+                           style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; width: 100%; color: var(--text-dark);">
+                    
+                    <label for="message" style="font-weight: bold;">Message:</label>
+                    <textarea id="message" name="message" rows="5" required 
+                              style="padding: 12px; border: 1px solid #ccc; border-radius: 4px; width: 100%; resize: vertical; color: var(--text-dark);"></textarea>
+                    
+                    <button type="submit" 
+                            style="background-color: var(--secondary-color); color: var(--text-dark); border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-size: 1.1em; font-weight: bold; transition: background-color 0.3s;">
+                        Send Message
+                    </button>
+                    
+                </form>
+
+                <div class="contact-info" style="margin-top: 50px;">
+                    <div class="contact-item">
+                        <h3 style="color: var(--secondary-color); font-size: 1.2em;">Head Office</h3>
+                        <p>3rd Floor Al-Mutlaq Complex Bldg.3, Bandariyah, PO Box 2134, Al Khobar 31952, KSA</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 style="color: var(--secondary-color); font-size: 1.2em;">Call Us</h3>
+                        <p><strong>Phone:</strong> +966 13 817 5786 / 802 2922</p>
+                        <p><strong>Fax:</strong> +966 13 817 5761</p>
+                    </div>
+                    <div class="contact-item">
+                        <h3 style="color: var(--secondary-color); font-size: 1.2em;">Email</h3>
+                        <p><strong>Inquiries:</strong> <a href="mailto:mail@maes-wll.com" style="color: white;">mail@maes-wll.com</a></p>
+                
+                    </div>
                 </div>
             </div>
             <p style="margin-top: 30px; font-size: 0.9em;">Branches also located in: Jubail, Riyadh, Jeddah</p>
-
         </div>
     </section>
 
-    <!-- Footer -->
     <footer id="footer">
         <div class="container">
             <p>&copy; 2025 M. Advanced Energy Systems (MAES). All Rights Reserved. | <a href="#" style="color: var(--secondary-color);">Privacy Policy</a></p>
-            <!-- Developer Signature Added Here -->
             <span class="developer-credit">Developed by Mohd_Muthayyub</span>
         </div>
     </footer>
