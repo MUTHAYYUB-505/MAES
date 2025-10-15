@@ -359,10 +359,24 @@
 
             #nav ul {
                 padding-top: 15px;
+                /* --- START NAVIGATION FIX --- */
+                flex-direction: column; /* Stacks links vertically */
+                align-items: center;    /* Centers the stack */
+                width: 100%;            /* Ensures full width usage */
+                /* --- END NAVIGATION FIX --- */
             }
             
+            /* --- ADDED RULE FOR NAVIGATION FIX --- */
+            #nav ul li {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px; /* Space between links */
+            }
+            /* --- END ADDED RULE --- */
+
             #nav ul li a {
-                padding: 8px 10px;
+                padding: 10px; /* Increased padding for easier tapping */
+                display: block; /* Makes the whole area clickable */
             }
 
             #hero h1 {
@@ -549,7 +563,7 @@ Yield & Uptime, thereby creating value for our Customers, Shareholders, & Employ
                     <textarea id="message" name="message" rows="5" required style="resize: vertical;"></textarea>
                     
                     <button type="submit" class="form-submit-btn"
-                                  style="background-color: var(--secondary-color); color: var(--text-dark); border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-size: 1.1em; font-weight: bold; transition: background-color 0.3s;">
+                                     style="background-color: var(--secondary-color); color: var(--text-dark); border: none; padding: 15px 30px; border-radius: 4px; cursor: pointer; font-size: 1.1em; font-weight: bold; transition: background-color 0.3s;">
                         Send Message
                     </button>
                     
