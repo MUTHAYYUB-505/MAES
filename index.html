@@ -354,29 +354,23 @@
         /* Responsiveness */
         @media (max-width: 768px) {
             #header .container {
+                /* This still makes the logo stack above the navigation bar */
                 flex-direction: column;
             }
 
             #nav ul {
                 padding-top: 15px;
-                /* --- START NAVIGATION FIX --- */
-                flex-direction: column; /* Stacks links vertically */
-                align-items: center;    /* Centers the stack */
-                width: 100%;            /* Ensures full width usage */
-                /* --- END NAVIGATION FIX --- */
+                /* REVERTED: Removing the 'flex-direction: column' and 'align-items: center' */
             }
             
-            /* --- ADDED RULE FOR NAVIGATION FIX --- */
             #nav ul li {
-                width: 100%;
-                text-align: center;
-                margin-bottom: 10px; /* Space between links */
+                /* REVERTED: Removing the full width and center text */
             }
-            /* --- END ADDED RULE --- */
 
             #nav ul li a {
-                padding: 10px; /* Increased padding for easier tapping */
-                display: block; /* Makes the whole area clickable */
+                /* Reverting padding to save space for horizontal layout */
+                padding: 8px 10px; 
+                /* REVERTED: Removing 'display: block' */
             }
 
             #hero h1 {
